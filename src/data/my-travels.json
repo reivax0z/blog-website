@@ -1,0 +1,49 @@
+[
+    {
+        "city": "Sydney",
+        "country": "NSW, Australia",
+        "timezone": "AEST (UTC+10)",
+        "currency": "Australian Dollar ($ AUD)",
+        "population": "4.6 million",
+        "summary": "Sydney is the state capital of New South Wales and the most populous city in Australia. It is on Australia's south-east coast, on the Tasman Sea. Inhabitants of Sydney are called Sydneysiders, comprising a cosmopolitan and international population. The site of the first British colony in Australia, Sydney was established in 1788 at Sydney Cove by Arthur Phillip, commodore of the First Fleet, as a penal colony.",
+        "funfact": "Canberra was born from the war between Sydney and Melbourne over capital city!",
+        "cover": "https://images.unsplash.com/photo-1546268060-2592ff93ee24",
+        "top-5": [
+            {
+                "name": "Opera House",
+                "description": "One of the symbol of Australia, known all over the world, like the Eiffel Tower!",
+                "facts": "Created in 1973 and designed by Danish architect Jørn Utzon. Described as an \"artistic monument\", it is one of the most recognisable landmarks in both Sydney and Australia and is a UNESCO World Heritage Site.",
+                "location": "-33.8578533,151.2135612",
+                "photo": "https://images.unsplash.com/photo-1559146626-15c91bdd9eee"
+            },
+            {
+                "name": "Bondi to Coogee Beach walk",
+                "description": "A great walk along the shore of 2h is waiting for you.",
+                "facts": "Superb views, glorious beaches, amazing swimming pools... but also sharks.",
+                "location": "-33.8923627,151.2758898",
+                "photo": "https://images.unsplash.com/photo-1551980424-665454563867"
+            },
+            {
+                "name": "The Blue Mountains",
+                "description": "The Blue Mountains are part of a national park, located within 2h drive west of Sydney.",
+                "facts": "Did you know? Their names come from the colour of the rocks: they are blue!",
+                "location": "-33.5910335,150.2784993",
+                "photo": "https://images.unsplash.com/photo-1564946643964-4b2fc409d996"
+            },
+            {
+                "name": "Manly Beach",
+                "description": "One of the most famous beach for surfers in the world!",
+                "facts": "Access it via a ferry from the Sydney CBD (approx. 30 min). Some surfing schools are here, so... it is time to give it a try!",
+                "location": "-33.7975343,151.2830116",
+                "photo": "https://images.unsplash.com/photo-1531219432768-9f540ce91ef3"
+            },
+            {
+                "name": "Taronga Zoo",
+                "description": "Situated at the top of a hill, you'll have a great point of view on Sydney.",
+                "facts": "You'll discover girafs, dolphins, koalas, kangaroos, ... but also some very dangerous predators.",
+                "location": "-33.8435428,151.2391531",
+                "photo": "https://images.unsplash.com/photo-1508362965452-962e39813d34"
+            }
+        ]
+    }
+]
