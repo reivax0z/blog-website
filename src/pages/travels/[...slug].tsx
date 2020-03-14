@@ -9,7 +9,7 @@ function TravelPageDetails(props) {
     if (!details) {
         return (
             <div className="container">
-                <Header />
+                <Header current={props.pathname} />
                 <p>Destination {props.slug} not found</p>
             </div>
         )
@@ -17,7 +17,7 @@ function TravelPageDetails(props) {
     
     return (
         <div className="container">
-            <Header />
+            <Header current={props.pathname} />
 
             <Breadcrumb 
                 links={[
@@ -104,6 +104,7 @@ TravelPageDetails.getInitialProps = async function(context) {
     return {
       slug,
       travels: config.default,
+      pathname: context.pathname,
     }
 }
 

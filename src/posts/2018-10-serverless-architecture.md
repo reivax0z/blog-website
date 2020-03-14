@@ -1,10 +1,4 @@
-# Serverless micro-services architecture on AWS
-
-> Lessons learnt & recommendations
-
-___
-
-## Content
+# Content
 
 - [Architecture](#Architecture)
 
@@ -28,7 +22,7 @@ ___
 
 ___
 
-## Architecture
+# Architecture
 
 For one of our main clients, we wanted to get an architecture that catered for `asynchronous` and `decoupled` business logic as well as easy `scalability` and `fail-over recovery`.
 
@@ -60,7 +54,7 @@ Note that on top of this, our app secret management is done using CredStash. Cre
 
 With this design in mind, 2 main implementations arise for the queueing system: SQS vs DynamoDB.
 
-### SQS
+## SQS
 
 At the time of the design choice, SQS was not supported as a Lambda event source, which meant the following implication:
 
@@ -77,7 +71,7 @@ With SQS, you also need to care for the following rules:
 - You need to remove the message from the queue manually once successfully processed.
 - Order might not be preserved.
 
-### DynamoDB + Stream
+## DynamoDB + Stream
 
 The DynamoDB is used to store data temporarily (which can be used for logging / audit) and allows to trigger a Stream on each data change.
 
@@ -90,7 +84,7 @@ With DynamoDB Stream, you get the following:
 - 24h data retention (non configurable).
 - Order is preserved.
 
-## Pros vs Cons
+# Pros vs Cons
 
 **Pros:**
 
@@ -109,11 +103,11 @@ With DynamoDB Stream, you get the following:
 - Artefact size limit (50MB)
 - Lambda cold starts
 
-## Lessons Learnt
+# Lessons Learnt
 
 From our own hands-on experience, trying to deliver value quickly to the client, here are some of the main hurdles we faced and how manage / approach them.  
 
-### Poison Messages
+## Poison Messages
 
 When a message part of a batch fails, the entire batch fails. This means that the batch will be retried (your system needs to allow the same message to be processed multiple times). 
 
@@ -125,7 +119,7 @@ If you are worried about this situation, then this design might not be the best 
 
 Note that this behaviour should mainly appear during testing phase, when a contract is not respected between your internal components. You have to make your stakeholder understand the risks and what they want to do in case of failure.
 
-### Stateless Implementation
+## Stateless Implementation
 
 One of the main issues found when using this architecture is that the Lambdas are by definition Stateless. 
 
@@ -133,7 +127,7 @@ In the current solution, the secrets configuration of the micro-service is hoste
 
 If you end up having an important overhead caused by the statelessness of the design, it might indicate that you need some kind of long-lived solution to handle the implementation of your micro-services (therefore moving away from a Stateless architecture).
 
-### Private VPC
+## Private VPC
 
 One of the requirements of our project was to have the system living in a private VPC.
 
@@ -149,11 +143,11 @@ Also note that using a private VPC with Lambda adds a huge overhead on your cold
 
 (See [this article](https://hackernoon.com/im-afraid-you-re-thinking-about-aws-lambda-cold-starts-all-wrong-7d907f278a4f) for more details about Lambda cold starts)
 
-## Decision
+# Decision
 
 You now have to decide to go Serverless (using Lambda) or using a more classic and Stateful environment (using EC2).
 
-### Serverless
+## Serverless
 
 As depicted in this discussion, the Serverless architecture approach allows to leverage some out-of-the-box AWS goodness:
 
@@ -167,7 +161,7 @@ All of this is given and allows to focus on the core business logic rather than 
 
 However, nothing is perfect and we have already depicted some of the main drawbacks of this design, meaning you will need proper thinking before choosing to go Serverless.
 
-### EC2
+## EC2
 
 On the other hand, with EC2, you are the one managing the infrastructure. This means that to achieve the above outcome, the following will need to happen:
 
@@ -182,7 +176,7 @@ On the other hand, with EC2, you are the one managing the infrastructure. This m
 
 On the plus side, EC2 is perfect for Stateful applications. For instance, this enables your configuration or secrets to be loaded only once (at start time) rather than on each call (for the Stateless solution).
 
-## Conclusion
+# Conclusion
 
 Based on the above analysis, a way to decide which solution to go for will depend on:
 

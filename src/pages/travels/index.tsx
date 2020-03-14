@@ -6,7 +6,7 @@ import Breadcrumb from '../../components/Breadcrumb';
 function TravelPage(props) {
     return (
         <div className="container">
-            <Header />
+            <Header current={props.pathname} />
 
             <Breadcrumb 
                 links={[
@@ -49,6 +49,7 @@ TravelPage.getInitialProps = async function(context) {
     const config = await import(`../../data/my-travels.json`);
     return {
       travels: config.default,
+      pathname: context.pathname,
     }
 }
 

@@ -1,28 +1,45 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default class Header extends React.Component {  
+export default class Header extends React.Component<{ current: string }, { items: { url: string, name: string }[] }> {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [
+                { url: '/', name: 'Home' },
+                { url: '/travels/', name: 'Travels' },
+                { url: '/blog/', name: 'Tech Blog' },
+                { url: '/about/', name: 'About' }
+            ]
+        }
+    }
+
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <span className="navbar-brand mb-0 h1">Xavier Blog</span>
             <div className="collapse navbar-collapse">
                 <ul className="navbar-nav mr-auto">
-                    <li className="nav-item">
-                        <Link href="/">
-                            <a className="nav-link">Home</a>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link href="/travels/">
-                            <a className="nav-link">Travels</a>
-                        </Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link href="/blog/">
-                            <a className="nav-link">Blog Posts</a>
-                        </Link>
-                    </li>
+                    {this.state.items.map((item, index) => {
+                        if (this.props.current === '/') {
+                            return (
+                                <li className="nav-item" key={index}>
+                                    <Link href={item.url}>
+                                        <a className={'nav-link' + (item.url === this.props.current ? ' active': '')}>{item.name}</a>
+                                    </Link>
+                                </li>
+                            )
+                        }
+
+                        return (
+                            <li className="nav-item" key={index}>
+                                <Link href={item.url}>
+                                    <a className={'nav-link' + (this.props.current.startsWith(item.url) && item.url !== '/' ? ' active': '')}>{item.name}</a>
+                                </Link>
+                            </li>
+                        )}
+                    )}
                 </ul>
             </div>
         </nav>

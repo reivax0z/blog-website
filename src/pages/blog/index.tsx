@@ -6,12 +6,12 @@ import Breadcrumb from '../../components/Breadcrumb';
 function BlogPage(props) {
     return (
         <div className="container">
-            <Header />
+            <Header current={props.pathname} />
             
             <Breadcrumb 
                 links={[
                     { href: '/', name: 'Home' }, 
-                    { name: 'Blog' }
+                    { name: 'Tech Blog' }
                 ]}
             ></Breadcrumb>
 
@@ -53,10 +53,10 @@ function BlogPage(props) {
 }
 
 BlogPage.getInitialProps = async function(context) {
-    const { slug } = context.query
     const config = await import(`../../data/blog-posts.json`);
     return {
       posts: config.default,
+      pathname: context.pathname
     }
 }
 

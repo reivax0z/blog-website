@@ -1,18 +1,25 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Breadcrumb from '../components/Breadcrumb'
 import Link from 'next/link'
 
-function HomePage() {
+function HomePage(props) {
     return (
         <div className="container">
-            <Header />
+            <Header current={props.pathname} />
+            
+            <Breadcrumb 
+                links={[
+                    { name: 'Home' }
+                ]}
+            ></Breadcrumb>
 
             <div className="jumbotron">
                 <h1 className="display-4">Hello, world!</h1>
-                <p className="lead">Blog website used to showcase some of my interests, namely <em>Traveling</em> and <em>Technology</em>.</p>
+                <p className="lead">This is my blog website, which I primarily use to showcase some of my interests, namely <em>Traveling</em> and <em>Technology</em>.</p>
                 <hr className="my-4"></hr>
                 <p>This site contains recommendation on travel destinations and technology blog posts based on my experiences.</p>
-                <p>The website itself is built using <code>Next.js</code>, <code>Typescript</code>, <code>React</code>, uses <code>Bootstrap</code> for the design and is hosted on AWS.</p>
+                <p>The website itself is built using <code>Next.js</code>, <code>Typescript</code>, <code>React</code>, uses <code>Bootstrap</code> for the design and is hosted on <code>AWS</code>.</p>
             </div>
 
             <div className="row">
@@ -49,6 +56,12 @@ function HomePage() {
             <Footer />
         </div>
     )
+}
+
+HomePage.getInitialProps = async function(context) {
+    return {
+      pathname: context.pathname,
+    }
 }
 
 export default HomePage
