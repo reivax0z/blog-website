@@ -15,7 +15,7 @@ export default function BlogPost(props) {
         <Breadcrumb 
             links={[
                 { href: '/', name: 'Home' }, 
-                { href: '/blog', name: 'Tech Blog' },
+                { href: '/blog/', name: 'Tech Blog' },
                 { name: info.title }
             ]}
         ></Breadcrumb>

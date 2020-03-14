@@ -23,9 +23,9 @@
     },
     {
         "title": "Integration tests",
-        "summary": "Sample project to demonstrate the use of integration tests",
+        "summary": "Sample project to demonstrate the use of integration tests.",
         "cover": "https://images.unsplash.com/photo-1554475901-e2ce1a3f857e",
         "date": "2019, July",
-        "url": "https://github.com/reivax0z/integration-tests."
+        "url": "https://github.com/reivax0z/integration-tests"
     }
 ]

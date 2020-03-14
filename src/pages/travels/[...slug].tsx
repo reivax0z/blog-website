@@ -22,7 +22,7 @@ function TravelPageDetails(props) {
             <Breadcrumb 
                 links={[
                     { href: '/', name: 'Home' }, 
-                    { href: '/travels', name: 'Travels' },
+                    { href: '/travels/', name: 'Travels' },
                     { name: details.city }
                 ]}
             ></Breadcrumb>

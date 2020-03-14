@@ -12,6 +12,14 @@ module.exports = {
         routes[`/travels/${cityName}`] = { page: '/travels/[...slug]', query: { slug: cityName } };
       });
 
+      const blogsConfig = require(`./src/data/blog-posts.json`);
+
+      blogsConfig.forEach((post) => {
+        if (!post.url.startsWith('http')) {
+          routes[`/blog/${post.url}`] = { page: '/blog/[...slug]', query: { slug: post.url } };
+        }
+      });
+
       return routes;
     },
     webpack: function(config) {

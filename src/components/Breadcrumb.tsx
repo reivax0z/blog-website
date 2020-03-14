@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default class Breadcrumb extends React.Component<{ links: { href?: string; name: string; }[] }> {  
     render() {
@@ -13,7 +14,7 @@ export default class Breadcrumb extends React.Component<{ links: { href?: string
                 <ol className="breadcrumb">
                     {this.props.links.map((link: { href?: string; name: string }, index) => (
                         <li key={index} className="breadcrumb-item">
-                            {link.href ? <a href={link.href}>{link.name}</a> : link.name}
+                            {link.href ? <Link href={link.href}><a href={link.href}>{link.name}</a></Link> : link.name}
                         </li>
                     ))}
                 </ol>
