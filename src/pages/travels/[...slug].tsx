@@ -28,7 +28,7 @@ function TravelPageDetails(props) {
             ></Breadcrumb>
             
             <div className="jumbotron">
-                <img src={details.cover} className="" alt="..." />
+                <img src={`${details.cover}?fit=crop&w=800`} className="" alt="..." />
                 <style jsx>{`
                     .jumbotron img {
                         width: 100%;
@@ -64,7 +64,7 @@ function TravelPageDetails(props) {
             <h2>My favourite 5 places</h2>
             {details['top-5'].map((top, index) => (
                 <div key={index} className="media">
-                    <img src={top.photo} className="align-self-start mr-3 img-thumbnail" alt="..." />
+                    <img src={`${top.photo}?fit=crop&w=300`} className="align-self-center mr-3 img-thumbnail" alt="..." />
                     <style jsx>{`
                         .media img {
                             width: 18rem;

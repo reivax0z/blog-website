@@ -22,7 +22,7 @@ export default function BlogPost(props) {
 
       <article>
         <div className="jumbotron">
-                <img src={info.cover} className="" alt="..." />
+                <img src={`${info.cover}?fit=crop&w=800`} className="" alt="..." />
                 <style jsx>{`
                     .jumbotron img {
                         width: 100%;
