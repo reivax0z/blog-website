@@ -70,13 +70,10 @@ function TravelPageDetails(props) {
             <h2>My favourite 5 places</h2>
             <div className="row">
             {details['top-5'].map((top, index) => (
-                <div key={index} className="col mb-4">
+                <div key={index} className="col-md-4 col-lg-6">
                     <div className="card h-100">
                     <img src={`${top.photo}?fit=crop&w=800`} className="card-img-top" alt="..." />
                     <style jsx>{`
-                        .card {
-                            width: 25rem;
-                        }
                         .card img {
                             width: 100%;
                         }
@@ -90,17 +87,12 @@ function TravelPageDetails(props) {
                 </div>
             ))}
             </div>
-
-            <h2>See on a Map</h2>
-            <div className="row">
-                <div className="col">
-                    <Map
-                        places={details['top-5']}
-                    >
-                    </Map>
-                </div>
             </div>
-            </div>
+                  
+            <Map
+                places={details['top-5']}
+            >
+            </Map>
 
             <Footer />
         </div>
