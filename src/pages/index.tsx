@@ -31,7 +31,7 @@ function HomePage(props) {
                         <div className="card-body">
                             <h5 className="card-title">Some of my travel highlights</h5>
                             <p className="card-text">With supporting photos and top things to visit.</p>
-                            <Link href="/travels">
+                            <Link href="/travels" passHref>
                                 <a className="btn btn-primary">See more</a>
                             </Link>
                         </div>
@@ -45,7 +45,7 @@ function HomePage(props) {
                         <div className="card-body">
                             <h5 className="card-title">Some of my tech insights</h5>
                             <p className="card-text">Taken from past projects and problem faced.</p>
-                            <Link href="/blog">
+                            <Link href="/blog" passHref>
                                 <a className="btn btn-primary">See more</a>
                             </Link>
                         </div>

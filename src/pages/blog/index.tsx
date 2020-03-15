@@ -32,11 +32,11 @@ function BlogPage(props) {
                             </div>
                             <div className="card-footer">
                                 {post.url.startsWith('http') && 
-                                <a href={post.url} className="btn btn-primary">Read more</a>
+                                    <a href={post.url} className="btn btn-primary">Read more</a>
                                 }
 
                                 {!post.url.startsWith('http') && 
-                                <Link href={"/blog/" + post.url}>
+                                <Link href={"/blog/" + post.url} as={"/blog/" + post.url + '.html'} passHref>
                                     <a className="btn btn-primary">Read more</a>
                                 </Link>
                                 }

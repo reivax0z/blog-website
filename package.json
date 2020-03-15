@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "next",
     "preview": "cd out && serve -p 8080",
-    "export": "next export",
-    "build": "next build",
+    "export": "rm -fr out && next export",
+    "build": "rm -fr .next && next build",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

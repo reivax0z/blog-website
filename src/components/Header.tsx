@@ -25,7 +25,7 @@ export default class Header extends React.Component<{ current: string }, { items
                         if (this.props.current === '/') {
                             return (
                                 <li className="nav-item" key={index}>
-                                    <Link href={item.url}>
+                                    <Link href={item.url} passHref>
                                         <a className={'nav-link' + (item.url === this.props.current ? ' active': '')}>{item.name}</a>
                                     </Link>
                                 </li>
@@ -34,7 +34,7 @@ export default class Header extends React.Component<{ current: string }, { items
 
                         return (
                             <li className="nav-item" key={index}>
-                                <Link href={item.url}>
+                                <Link href={item.url} passHref>
                                     <a className={'nav-link' + (this.props.current.startsWith(item.url) && item.url !== '/' ? ' active': '')}>{item.name}</a>
                                 </Link>
                             </li>
