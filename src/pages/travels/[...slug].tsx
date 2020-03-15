@@ -8,15 +8,17 @@ function TravelPageDetails(props) {
 
     if (!details) {
         return (
-            <div className="container">
+            <div>
                 <Header current={props.pathname} />
-                <p>Destination {props.slug} not found</p>
+                <div className="container">
+                    <p>Destination {props.slug} not found</p>
+                </div>
             </div>
         )
     }
     
     return (
-        <div className="container">
+        <div>
             <Header current={props.pathname} />
 
             <Breadcrumb 
@@ -34,6 +36,7 @@ function TravelPageDetails(props) {
                         width: 100%;
                     }
                 `}</style>
+                <div className="container">
                 <h1 className="display-4">{details.city}</h1>
                 <h3>{details.country}</h3>
                 <p className="lead">{details.summary}</p>
@@ -59,8 +62,10 @@ function TravelPageDetails(props) {
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
 
+            <div className="container">
             <h2>My favourite 5 places</h2>
             {details['top-5'].map((top, index) => (
                 <div key={index} className="media">
@@ -91,6 +96,7 @@ function TravelPageDetails(props) {
                     >
                     </Map>
                 </div>
+            </div>
             </div>
 
             <Footer />

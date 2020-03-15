@@ -1,5 +1,12 @@
 [
     {
+        "title": "Published Research Paper, Computer Law & Security Review",
+        "summary": "The Internet of Things (IoT) and its impact on individual privacy: An Australian perspective",
+        "cover": "https://images.unsplash.com/photo-1557597774-9d273605dfa9",
+        "date": "2016, February",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0267364915001661"
+    },
+    {
         "title": "AWS GitHub webhook - CI pipeline",
         "summary": "A CI pipeline using Github webhook, Api Gateway, Lambda and Codebuild.",
         "cover": "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
@@ -12,7 +19,7 @@
         "cover": "https://images.unsplash.com/photo-1532788411214-25d48ce9275a",
         "date": "2018, November",
         "url": "2018-10-serverless-architecture",
-        "tags": "#microservice #serverless #architecture #lambda #aws #asynchronous #decoupled #scalability #failover"
+        "tags": ["microservice", "serverless", "architecture", "lambda", "aws", "asynchronous", "decoupled", "scalability", "failover"]
     },
     {
         "title": "Stock market tool",

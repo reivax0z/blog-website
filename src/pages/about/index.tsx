@@ -9,7 +9,7 @@ export default function About(props) {
   const info = props.info
 
   return (
-    <div className="container">
+    <div>
         <Header current={props.pathname} />
 
         <Breadcrumb 
@@ -21,16 +21,13 @@ export default function About(props) {
 
       <article>
         <div className="jumbotron">
-                <style jsx>{`
-                    .jumbotron img {
-                        width: 100%;
-                    }
-                `}</style>
-                <h1 className="display-4">{info.title}</h1>
-                <h3>{info.date}</h3>
-                <p className="lead">{info.summary}</p>
+                <div className="container">
+                  <h1 className="display-4">{info.title}</h1>
+                  <h3>{info.date}</h3>
+                  <p className="lead">{info.summary}</p>
+                </div>
         </div>
-        <div>
+        <div className="container">
           <ReactMarkdown source={markdownBody} />
         </div>
       </article>
@@ -48,7 +45,7 @@ About.getInitialProps = async function(context) {
     return {
       info: {
         title: 'Xavier Caron',
-        summary: 'Software Engineer // AWS Certified // MEng(CS) & MIS',
+        summary: 'Software Engineer | AWS Certified, MEng(CS) & MIS',
         date: '2020, March'
       },
       pathname: context.pathname,

@@ -5,7 +5,7 @@ import Breadcrumb from '../../components/Breadcrumb';
 
 function TravelPage(props) {
     return (
-        <div className="container">
+        <div>
             <Header current={props.pathname} />
 
             <Breadcrumb 
@@ -15,10 +15,11 @@ function TravelPage(props) {
                 ]}
             ></Breadcrumb>
 
-            <div className="row">
+            <div className="container">
+                <div className="row">
                 {props.travels.map((place, index) => (
                     <div key={index} className="col mb-4">
-                        <div className="card  h-100">
+                        <div className="card h-100">
                         <style jsx>{`
                             .card {
                                 width: 18rem;
@@ -30,13 +31,14 @@ function TravelPage(props) {
                                 <h6 className="card-subtitle mb-2 text-muted">{place.country}</h6>
                             </div>
                             <div className="card-footer">
-                                <Link href={"/travels/" + place.city.toLowerCase()} as={"/travels/" + place.city.toLowerCase() + '.html'} passHref>
+                                <Link href={"/travels/[...slug]"} as={`/travels/${place.city.toLowerCase()}`} passHref>
                                     <a className="btn btn-primary">Read more</a>
                                 </Link>
                             </div>
                         </div>
                     </div>
                 ))}
+                </div>
                 
             </div>
             <Footer />

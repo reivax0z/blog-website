@@ -9,7 +9,7 @@ export default function BlogPost(props) {
   const info = props.info
 
   return (
-    <div className="container">
+    <div>
         <Header current={props.pathname} />
 
         <Breadcrumb 
@@ -22,18 +22,28 @@ export default function BlogPost(props) {
 
       <article>
         <div className="jumbotron">
-                <img src={`${info.cover}?fit=crop&w=800`} className="" alt="..." />
+                <img src={`${info.cover}?fit=crop&w=800`} className="" alt="..." />    
                 <style jsx>{`
                     .jumbotron img {
                         width: 100%;
                     }
+                    .badge {
+                      margin-left: 2px;
+                      margin-right: 2px;
+                    }
                 `}</style>
+                <div className="container">
                 <h1 className="display-4">{info.title}</h1>
                 <h3>{info.date}</h3>
                 <p className="lead">{info.summary}</p>
-                <p><code>{info.tags}</code></p>
+                <p>{info.tags.map((tag, index) => {
+                  return (
+                      <span className="badge badge-secondary" key={index}>{tag}</span>
+                  )
+                })}</p>
+                </div>
         </div>
-        <div>
+        <div className="container">
           <ReactMarkdown source={markdownBody} />
         </div>
       </article>

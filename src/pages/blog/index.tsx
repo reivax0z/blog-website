@@ -5,7 +5,7 @@ import Breadcrumb from '../../components/Breadcrumb';
 
 function BlogPage(props) {
     return (
-        <div className="container">
+        <div>
             <Header current={props.pathname} />
             
             <Breadcrumb 
@@ -15,7 +15,8 @@ function BlogPage(props) {
                 ]}
             ></Breadcrumb>
 
-            <div className="row">
+            <div className="container">
+                <div className="row">
 
                 {props.posts.map((post, index) => (
                     <div key={index} className="col mb-4">
@@ -28,7 +29,8 @@ function BlogPage(props) {
                             <img src={`${post.cover}?fit=crop&w=300`} className="card-img-top" alt="cover"></img>
                             <div className="card-body">
                                 <h5 className="card-title">{post.title}</h5>
-                                <h6 className="card-subtitle mb-2 text-muted">{post.summary}</h6>
+                                <h6 className="card-subtitle mb-2 text-muted">{post.date}</h6>
+                                <p className="card-text">{post.summary}</p>
                             </div>
                             <div className="card-footer">
                                 {post.url.startsWith('http') && 
@@ -36,7 +38,7 @@ function BlogPage(props) {
                                 }
 
                                 {!post.url.startsWith('http') && 
-                                <Link href={"/blog/" + post.url} as={"/blog/" + post.url + '.html'} passHref>
+                                <Link href={"/blog/[...slug]"} as={`/blog/${post.url}`} passHref>
                                     <a className="btn btn-primary">Read more</a>
                                 </Link>
                                 }
@@ -44,7 +46,7 @@ function BlogPage(props) {
                         </div>
                     </div>
                 ))}
-                
+                </div>
             </div>
 
             <Footer />
