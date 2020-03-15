@@ -66,29 +66,32 @@ function TravelPageDetails(props) {
             </div>
 
             <div className="container">
+
             <h2>My favourite 5 places</h2>
+            <div className="row">
             {details['top-5'].map((top, index) => (
-                <div key={index} className="media">
-                    <img src={`${top.photo}?fit=crop&w=300`} className="align-self-center mr-3 img-thumbnail" alt="..." />
+                <div key={index} className="col mb-4">
+                    <div className="card h-100">
+                    <img src={`${top.photo}?fit=crop&w=800`} className="card-img-top" alt="..." />
                     <style jsx>{`
-                        .media img {
-                            width: 18rem;
+                        .card {
+                            width: 25rem;
                         }
-                        .media {
-                            margin-bottom: 10px;
+                        .card img {
+                            width: 100%;
                         }
                     `}</style>
-                    <div className="media-body">
-                        <h5 className="mt-0">{top.name}</h5>
+                    <div className="card-body">
+                        <h5 className="card-title">{top.name}</h5>
                         <p>{top.description}</p>
-                        <p>{top.facts}</p>
-                        <a className="btn btn-primary" href={"https://www.google.com/maps/place/" + top.location}>See on Maps</a>
+                        <p className="card-subtitle mb-2 text-muted">{top.facts}</p>
+                    </div>
                     </div>
                 </div>
             ))}
+            </div>
 
             <h2>See on a Map</h2>
-            
             <div className="row">
                 <div className="col">
                     <Map
