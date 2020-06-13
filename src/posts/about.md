@@ -13,10 +13,11 @@
   - [Master of Engineering - Computer Science](#master-of-engineering---computer-science)
   - [Year Abroad Program - Erasmus](#year-abroad-program---erasmus)
 - [Certifications](#certifications)
-  - [Professional Scrum Master](#professional-scrum-master)
-  - [AWS Certified Developer](#aws-certified-developer)
-  - [Oracle Certified Professional](#oracle-certified-professional)
-  - [Oracle Certified Associate](#oracle-certified-associate)
+  - [AWS Certified Cloud Practitioner](#aws-certified-cloud-practitioner)
+  - [Scrum.org Certified Scrum Master](#scrum-org-certified-scrum-master)
+  - [AWS Certified Developer Associate](#aws-certified-developer-associate)
+  - [Oracle Certified Java Professional](#oracle-certified-java-professional)
+  - [Oracle Certified Java Associate](#oracle-certified-java-associate)
 - [Publications](#publications)
   - [Versent Tech Blog - 2018](#versent-tech-blog---2018)
   - [Computer Law & Security Review - 2016](#computer-law-&-security-review---2016)
@@ -30,7 +31,7 @@ Xavier is a **Software Engineer** with 7+ years of experience specialising in ba
 
 Passionate about technology and constantly looking for new knowledge, Xavier holds a **Master of Engineering (Computer Science)** from the University of Nice, France and a **Master of Information Systems (MIS)** from the University of Melbourne, Australia.
 
-Xavier is a certified **Oracle Professional Java Programmer** (OCPJP), a certified **AWS Developer Associate** (AWS-DVA) and a certified **Professional Scrum Master** (PSM-I).
+Xavier is a certified **Oracle Professional Java Programmer** (OCP), a certified **AWS Developer Associate** (DVA) and a certified **Professional Scrum Master** (PSMI).
 
 His Master's thesis - **The Internet of Things (IoT) and its impact on individual privacy: an Australian perspective** - has been published in Computer Law & Security Review, February 2016.
 
@@ -137,25 +138,30 @@ ___
 
 # Certifications
 
-## Professional Scrum Master
-`PSM I | 2018` 
+## AWS Certified Cloud Practitioner
+`AWS Cloud Practitioner (CLF) | 2020` 
+
+[Certificate](https://www.youracclaim.com/badges/470affc0-d5c5-413d-8eff-f2b368fa289e/public_url)
+
+## Scrum.org Certified Scrum Master
+`Professional Scrum Master (PSMI) | 2018` 
 
 [Certificate](https://www.scrum.org/user/321030)
 
-## AWS Certified Developer
-`AWS Developer Associate | 2017` 
+## AWS Certified Developer Associate
+`AWS Developer Associate (DVA) | 2017` 
 
-[Certificate](https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2017-12-05&ci=AWS00357292)
+[Certificate](https://www.youracclaim.com/badges/1fa7d83b-81e4-4a11-82f6-4f3da8441a89/public_url)
 
-## Oracle Certified Professional
-`Java SE 6 Programmer | 2013` 
+## Oracle Certified Java Professional
+`Java SE6 Programmer (OCP) | 2013` 
 
-[Certificate](https://www.youracclaim.com/badges/f2fbd783-f4c7-4cbb-8804-96fe2cdffa61/linked_in_profile)
+[Certificate](https://www.youracclaim.com/badges/e16badb0-38cf-452e-a507-981cdba4c72b/public_url)
 
-## Oracle Certified Associate
-`Java SE 5/SE 6 Associate | 2012` 
+## Oracle Certified Java Associate
+`Java SE6 Associate (OCA) | 2012` 
 
-[Certificate](https://www.youracclaim.com/badges/28f4f951-fb0f-4c0b-a151-ac6396777f99/linked_in_profile)
+[Certificate](https://www.youracclaim.com/badges/88326bc2-811d-465f-9e20-af6a8dfb85cd/public_url)
 
 ___
 

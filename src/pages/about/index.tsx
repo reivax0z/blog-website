@@ -45,7 +45,7 @@ About.getInitialProps = async function(context) {
     return {
       info: {
         title: 'Xavier Caron',
-        summary: 'Software Engineer | AWS Certified, MEng(CS) & MIS',
+        summary: 'Software Engineer @ Atlassian | AWS Certified x2 | MEng(CS) & MIS',
         date: '2020, March'
       },
       pathname: context.pathname,
